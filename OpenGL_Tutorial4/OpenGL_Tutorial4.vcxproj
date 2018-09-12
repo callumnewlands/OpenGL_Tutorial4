@@ -69,7 +69,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Users\Callum\Source\Repos\OpenGL_Tutorial4\glfw-3.2.1.bin.WIN64\include;C:\Users\Callum\Source\Repos\OpenGL_Tutorial4\glew-2.1.0-win32\glew-2.1.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Callum\Source\Repos\OpenGL_Tutorial4\glfw-3.2.1.bin.WIN64\lib-vc2015;C:\Users\Callum\Source\Repos\OpenGL_Tutorial4\glew-2.1.0-win32\glew-2.1.0\lib\Release\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -85,6 +88,10 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\Callum\Source\Repos\OpenGL_Tutorial4\glfw-3.2.1.bin.WIN64\lib-vc2015;C:\Users\Callum\Source\Repos\OpenGL_Tutorial4\glew-2.1.0-win32\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -115,6 +122,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="fragmentShader.frg" />
+    <None Include="glew32.dll" />
+    <None Include="glfw3.dll" />
+    <None Include="vertexShader.vrt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h" />
+    <ClInclude Include="Vertex.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
