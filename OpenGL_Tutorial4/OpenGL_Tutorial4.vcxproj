@@ -70,8 +70,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\Callum\Source\Repos\OpenGL_Tutorial4\glfw-3.2.1.bin.WIN64\include;C:\Users\Callum\Source\Repos\OpenGL_Tutorial4\glew-2.1.0-win32\glew-2.1.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Callum\Source\Repos\OpenGL_Tutorial4\glfw-3.2.1.bin.WIN64\lib-vc2015;C:\Users\Callum\Source\Repos\OpenGL_Tutorial4\glew-2.1.0-win32\glew-2.1.0\lib\Release\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\callu\source\repos\OpenGL_Tutorial4\glfw-3.2.1.bin.WIN64\include;C:\Users\callu\source\repos\OpenGL_Tutorial4\glew-2.1.0-win32\glew-2.1.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\callu\source\repos\OpenGL_Tutorial4\glfw-3.2.1.bin.WIN64\lib-vc2015;C:\Users\callu\source\repos\OpenGL_Tutorial4\glew-2.1.0-win32\glew-2.1.0\lib\Release\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -89,7 +89,7 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Users\Callum\Source\Repos\OpenGL_Tutorial4\glfw-3.2.1.bin.WIN64\lib-vc2015;C:\Users\Callum\Source\Repos\OpenGL_Tutorial4\glew-2.1.0-win32\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\callu\source\repos\OpenGL_Tutorial4\glfw-3.2.1.bin.WIN64\lib-vc2015;C:\Users\callu\source\repos\OpenGL_Tutorial4\glew-2.1.0-win32\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>glew32.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -129,9 +129,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ShaderProgram.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h" />
+    <ClInclude Include="ShaderProgram.h" />
     <ClInclude Include="Vertex.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

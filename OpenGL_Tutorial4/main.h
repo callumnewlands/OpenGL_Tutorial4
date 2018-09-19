@@ -10,17 +10,20 @@
 // Standard Libraries
 #include <iostream>
 #include <string>
-#include <fstream>
-#include <sstream>
+//#include <fstream>
+//#include <sstream>
 #include <vector>
 
 // My Header Files
 #include "Vertex.h"
+#include "ShaderProgram.h"
 
-unsigned int getShaderProgram(const GLchar* vertexPath, const GLchar* fragmentPath);
+void initGLFW();
+int initGLEW();
+GLFWwindow* getDefaultWindow();
+//unsigned int getShaderProgram(const GLchar* vertexPath, const GLchar* fragmentPath);
 void onWindowResize(GLFWwindow* window, int width, int height);
-GLFWwindow* setupFirstWindow();
-void checkCompileErrors(unsigned int shader, std::string type);
+//void checkCompileErrors(unsigned int shader, std::string type);
 unsigned int getVAO(std::vector<vertex> vertices);
 std::vector<vertex> getTriangleVertices();
 std::vector<vertex> getCubeVertices();
